@@ -1,0 +1,27 @@
+package com.example.gato;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+public class GanadorX extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_ganador_x);
+        Button btn1;
+
+        btn1 = findViewById(R.id.btnvoleraComenzar);
+        btn1.setOnClickListener(this::onClick);
+
+    }
+
+    private void onClick(View view) {
+        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+        startActivity(intent);
+    }
+}
